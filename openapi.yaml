@@ -1,0 +1,42 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: 'Orders API'
+  description: 'API for an app for orders'
+paths:
+  /events/stats:
+    get:
+      summary: gets event forms from repair and orders
+      operationId: app.get_form_stats
+      description: gets forms
+      produces:
+      - application/json
+      responses:
+        200: 
+          description: the forms
+          schema:
+            $ref: '#/definitions/FormsByCustomer'
+        404:
+          description: forms do not exist
+  
+  
+definitions:
+  FormsByCustomer:
+    type: object
+    required:
+    - customer_id
+    - customer_name
+    - timestamp
+    properties:
+      customer_id:
+        type: string
+        example: "A01055260"
+      customer_name:
+        type: string
+        example: "Alex Lai"
+      timestamp:
+        type: string
+        example: "2020-01-09T00:00:00Z"
+
+  
+# Added by API Auto Mocking Plugin

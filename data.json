@@ -1,0 +1,16 @@
+[
+    {
+        "dateoflog": "2020-02-27T10:13:21",
+        "num_orders": 276,
+        "num_repair": 276,
+        "order_stats": "276 new items added to orders since 2020-02-27T10:13:11.",
+        "repair_stats": "276 of forms recieved. since 2020-02-27T10:13:11."
+    },
+    {
+        "dateoflog": "2020-02-27T10:13:31",
+        "num_orders": 319,
+        "num_repair": 320,
+        "order_stats": "319 new items added to orders since 2020-02-27T10:13:21.",
+        "repair_stats": "320 of forms recieved. since 2020-02-27T10:13:21."
+    }
+]
