@@ -19,7 +19,7 @@ with open('log_conf.yaml', 'r') as f:
 try:
     with open('~/deploy/ACIT3855-deployment/configs/processor/app_config.yaml', 'r') as f:
         app_config = yaml.safe_load(f.read())
-except IOError:
+except FileNotFoundError:
     with open('app_conf.yml', 'r') as f:
         app_config = yaml.safe_load(f.read())
 
