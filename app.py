@@ -16,14 +16,12 @@ with open('log_conf.yaml', 'r') as f:
     log_config = yaml.safe_load(f.read())
     logging.config.dictConfig(log_config)
 
-
-with open('app_conf.yaml', 'r') as f:
-    """
-    Loads the config files
-    for application and logging
-    """
-    app_config = yaml.safe_load(f.read())
-    logger = logging.getLogger('basicLogger')
+try:
+    with open('~/deploy/ACIT3855-deployment/configs/processor/app_config.yaml', 'r') as f:
+        app_config = yaml.safe_load(f.read())
+except IOError:
+    with open('app_conf.yml', 'r') as f:
+        app_config = yaml.safe_load(f.read())
 
 def init_scheduler():
     """
