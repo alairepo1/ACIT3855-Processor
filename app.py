@@ -17,7 +17,7 @@ with open('log_conf.yaml', 'r') as f:
     logging.config.dictConfig(log_config)
 
 try:
-    with open('~/deploy/ACIT3855-deployment/configs/processor/app_config.yaml', 'r') as f:
+    with open('~/deploy/ACIT3855-deployment/configs/processor/app_conf.yml', 'r') as f:
         app_config = yaml.safe_load(f.read())
 except FileNotFoundError:
     with open('app_conf.yml', 'r') as f:
